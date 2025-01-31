@@ -6,6 +6,7 @@ import NavigationBar from "@/components/ui/navigationbar";
 
 const manrope = Manrope({
   variable: "--font-manrope-sans",
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
