@@ -1,21 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+input,
+textarea {
+  @apply bg-white shadow-sm rounded-md outline-1 outline-neutral-200 px-4 text-sm;
+  @apply focus:ring-[3px] focus:ring-offset-2 focus:ring-cyan-600 focus:shadow-md;
+}
+
+input {
+  @apply h-12;
+}
+
+textarea {
+  @apply py-4;
 }
