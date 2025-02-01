@@ -3,6 +3,7 @@ import { Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import "material-symbols";
 import NavigationBar from "@/components/ui/navigationbar";
+import { Toaster } from "react-hot-toast";
 
 const manrope = Manrope({
   variable: "--font-manrope-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${manrope.className} ${geistMono.variable} antialiased`}
       >
+        <Toaster/>
         <NavigationBar />
         <main className="min-h-full h-fit w-full flex justify-center bg-gradient-to-tr from-slate-50 to-cyan-100">
           <div className="lg:w-[50%] w-full h-full flex flex-col pt-20 mb-8 px-8 gap-4">
