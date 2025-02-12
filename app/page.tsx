@@ -49,7 +49,11 @@ export default function Home() {
               Get in Touch
             </Button>
           </Link>
-          <Link href="/Naman_Rastogi_CV.pdf" download={"naman_rastogi_resume"}>
+          <Link
+            href="/Naman_Rastogi_CV.pdf"
+            download={"naman_rastogi_resume"}
+            target="_blank"
+          >
             <Button className="flex flex-row items-center gap-2 pe-6">
               <span className="material-symbols-rounded">Download</span>
               Resume

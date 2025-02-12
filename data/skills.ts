@@ -70,6 +70,14 @@ export const projects: ProjectProps[] = [
         banner: ''
     },
     {
+        projectTitle: 'CHCH Water Quality API',
+        projectDescription: '',
+        stack: ['Express', 'PostgreSQL'],
+        github: 'https://github.com/Hadoop-Hooligans/chch-well-water-quality/tree/main',
+        website: '',
+        banner: ''
+    },
+    {
         projectTitle: 'Read One Piece',
         projectDescription: '',
         stack: ['HTML', 'CSS', 'JavaScript', 'Express'],

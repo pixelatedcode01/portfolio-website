@@ -11,6 +11,7 @@ function LinkButton({ link, label }: { link: string; label: string }) {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
     <Link
+      target="_blank"
       href={link}
       className={`p-2 hover:bg-neutral-950 rounded-full group flex items-center justify-center cursor-pointer h-10 gap-1 ${
         isExpanded ? "bg-neutral-950" : "bg-neutral-100"
@@ -23,13 +24,9 @@ function LinkButton({ link, label }: { link: string; label: string }) {
       }}
     >
       {label === "GitHub" ? (
-        <Github
-          className={`${isExpanded ? "stroke-white" : ""}`}
-        />
+        <Github className={`${isExpanded ? "stroke-white" : ""}`} />
       ) : (
-        <Globe
-          className={`${isExpanded ? "stroke-white" : ""}`}
-        />
+        <Globe className={`${isExpanded ? "stroke-white" : ""}`} />
       )}
       {isExpanded ? (
         <span className="text-sm font-medium text-white">{label}</span>
@@ -64,7 +61,7 @@ export function ProjectCard({ item }: { item: ProjectProps }) {
       <div className="footer flex gap-3 pt-0 p-4 flex-row-reverse">
         <LinkButton link={item.github} label="GitHub"></LinkButton>
         {item.website ? (
-          <LinkButton link={item.github} label="Website"></LinkButton>
+          <LinkButton link={item.website} label="Website"></LinkButton>
         ) : null}
       </div>
     </div>
